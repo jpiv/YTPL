@@ -1,0 +1,28 @@
+{
+  "name": "plusalittlebit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "plusALittleBit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon plusALittleBit.js",
+    "push": "scp -r -i ./ytpl.pem ./plusALittleBit.js  ec2-user@ec2-54-174-86-196.compute-1.amazonaws.com:~/ytplb/plusALittleBit.js",
+    "start-server": "sudo $(which node) ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.0",
+    "request": "^2.72.0",
+    "split-ca": "^1.0.1",
+    "ytdl-core": "^0.7.15"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "plusLB",
+	"version": "1.0",
+	"browser_action": {
+		"default_title": "YTPLB",
+		"default_popup": "popup.html",
+		"default_icon": {
+			"38": "./popup.png"
+		}
+	},
+	"content_scripts": [{
+		"matches": ["https://*.youtube.com/*"],
+		"js": ["./bundle.js"]
+	}],
+	"permissions": [
+		"webRequest",
+		"https://*.youtube.com/*"
+	],
+	"background": {
+		"scripts": ["./background.js"]
+	}
+}
